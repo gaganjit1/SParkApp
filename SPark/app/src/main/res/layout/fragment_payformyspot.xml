@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--<TextView-->
+                <!--android:id="@+id/section_label"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Allotted Time: 15 seconds"-->
+                <!--android:textColor="#FFFFFF"-->
+                <!--android:textStyle="bold" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="11dp"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:layout_alignParentStart="true">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="66dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:layout_alignBaseline="@+id/garSel"
+                    android:layout_alignBottom="@+id/garSel"
+                    android:layout_toStartOf="@+id/garSel"
+                    android:text="  Garage: " />
+
+                <Spinner
+                    android:id="@+id/garSel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/textView4"
+                    android:layout_weight="0.23"
+                    android:entries="@array/garages" />
+
+                <TextView
+                    android:id="@+id/spot"
+                    android:layout_width="48dp"
+                    android:textColor="#FFFFFF"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/garSel"
+                    android:layout_toEndOf="@+id/garSel"
+                    android:text="  Spot: " />
+
+                <Spinner
+                    android:id="@+id/spotSel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/garSel"
+                    android:layout_toEndOf="@+id/textView2"
+                    android:layout_weight="0.60"
+                    android:dropDownWidth="100dp"
+                    android:minWidth="100dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="A02"
+                android:textColor="#FFFFFF"
+                android:id="@+id/ParkedSpot"
+                android:gravity="center"
+                android:textSize="125dp"
+                android:layout_below="@+id/textView"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Current Parking spot"
+                android:textColor="#FFFFFF"
+                android:id="@+id/textView"
+                android:layout_marginTop="80dp"
+                android:layout_below="@+id/section_label"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Current time"
+                android:textColor="#FFFFFF"
+                android:id="@+id/textView3"
+                android:gravity="center"
+                android:layout_below="@+id/ParkedSpot"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="--"
+                android:textColor="#FFFFFF"
+                android:id="@+id/textView4"
+                android:gravity="center"
+                android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Time: 0 mins      Cost: $0"
+                android:layout_marginTop="20dp"
+                android:textColor="#FFFFFF"
+                android:id="@+id/timeToAdd"
+                android:gravity="center"
+                android:layout_below="@+id/textView4"/>
+
+            <SeekBar
+                android:id="@+id/paymentScroll"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:minWidth="200dp"
+                android:gravity="center"
+                android:max="8"
+                android:progress="0"
+                android:layout_below="@+id/timeToAdd"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:text="Proceed with this spot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/payformyspot"
+                android:layout_below="@+id/paymentScroll"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

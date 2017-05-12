@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Settings">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="voiceGuidance"
+            android:summary="This setting will narrate you the nearest parking spot as it changes."
+            android:title="Allow Voice Guidance" />
+
+        <CheckBoxPreference
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultValue="true"
+            android:key="check_box_preference_1"
+            android:summary="This setting will narrate you the nearest parking spot as it changes."
+            android:title="Allow Location" />
+
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="locationDebug"
+            android:summary="This setting will display your current location (Debugging Purposes)."
+            android:title="Show Location" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
